@@ -1,4 +1,4 @@
-import { ClientData } from "../../../entities/client/Client";
+import { ClientData, Client } from "../../../entities/client/Client";
 import { ClientRepository } from "../repositories/ClientRepository";
 
 export class CreateClient {
@@ -8,13 +8,15 @@ export class CreateClient {
     this.repository = repository;
   }
 
-  async handle(client: ClientData) {
+  async exec(clientData: ClientData) {
+    const client = new Client(clientData);
+
     const clientAlreadyExists = await this.repository.getClientByEmail(
       client.email
     );
 
     if (clientAlreadyExists) return new Error("User already exists");
 
-    return this.repository.createClient(client);
+    return this.repository.createClient(clientData);
   }
 }

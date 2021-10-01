@@ -1,0 +1,20 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "docker",
+  "database": "clean-arch",
+  "synchronize": false,
+  "logging": false,
+  "entities": [
+    "src/adapters/infra/models/**.ts"
+  ],
+  "migrations": [
+    "src/main/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "src/main/database/migrations",
+    "entitiesDir": "src/adapters/infra/models"
+  }
+}
