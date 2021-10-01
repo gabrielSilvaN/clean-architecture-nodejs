@@ -15,7 +15,7 @@ export class CreateClient {
       client.email
     );
 
-    if (clientAlreadyExists) return new Error("Client already exists");
+    if (clientAlreadyExists) throw new Error("Client already exists");
 
     return this.repository.createClient(clientData);
   }
