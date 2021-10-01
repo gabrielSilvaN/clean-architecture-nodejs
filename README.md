@@ -11,16 +11,16 @@ Não haverá também sistema de autorização para as operações a princípio.
 
 ## Casos de uso
 
-- [ ] Criar cliente
-    - O sistema deve ser capaz de criar um novo usuário, entretanto, se um mesmo usuário já existir com o e-mail solicitado, uma exceção deverá ser lançada. 
-    - Os dados de entrada devem ser válidos.
+- [x] Criar cliente
+
+  - [x] O sistema deve ser capaz de criar um novo usuário, entretanto, se um mesmo usuário já existir com o e-mail solicitado, uma exceção deverá ser lançada.
+  - [x] Os dados de entrada devem ser válidos.
 
 - [ ] Alterar dados do cliente
-    - Os dados de entrada devem ser válidos.
-    
+  - Os dados de entrada devem ser válidos.
 - [ ] Visualizar dados de cliente
 - [ ] Deletar cliente
-- [ ] Listar todos os clientes
+- [x] Listar todos os clientes
 
 ## Dados do cliente
 
@@ -29,7 +29,6 @@ Não haverá também sistema de autorização para as operações a princípio.
 - Telefone (string)
 - Email (string)
 - Idade (number)
-- Sexo 'M' | 'F' (enum de char)
 
 ## Considerações dos requisitos funcionais
 
@@ -37,8 +36,7 @@ Não haverá também sistema de autorização para as operações a princípio.
 
 ## Metodologia aplicada
 
-O projeto será desenvolvido utilizando-se da metodologia **TDD** (Test Driven Development - Desenvolvimento guiado a teste), onde primeiro escreve-se o teste e em seguida o código de produção, induzindo o programdor a sempre manter o sistema bem testado.  
-
+O projeto será desenvolvido utilizando-se da metodologia **TDD** (Test Driven Development - Desenvolvimento guiado a teste), onde primeiro escreve-se o teste e em seguida o código de produção, induzindo o programdor a sempre manter o sistema bem testado.
 
 ## Testes a se fazer
 
