@@ -1,5 +1,5 @@
 import { ClientData } from "../../../entities/client/Client";
-import { CreateClient } from "../../../usecases/clients/createClient/CreateClient";
+import { CreateClient } from "../../../usecases/clients/CreateClient";
 import { HttpRequest, HttpResponse } from "../protocols/http";
 import { HttpController } from "../protocols/httpController";
 

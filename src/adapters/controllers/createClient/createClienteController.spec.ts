@@ -1,4 +1,4 @@
-import { CreateClient } from "../../../usecases/clients/createClient/CreateClient";
+import { CreateClient } from "../../../usecases/clients/CreateClient";
 import { HttpRequest } from "../protocols/http";
 
 describe("Create Client Controller", () => {

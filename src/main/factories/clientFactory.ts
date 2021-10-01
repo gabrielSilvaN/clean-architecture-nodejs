@@ -1,8 +1,9 @@
-import { CreateClient } from "../../usecases/clients/createClient/CreateClient";
+import { CreateClient } from "../../usecases/clients/CreateClient";
 import { CreateClientController } from "../../adapters/controllers/createClient";
 import { ListClientsController } from "../../adapters/controllers/listClients";
 
 import { ClientRepositoryTypeorm } from "../../adapters/infra/repositories/ClientRepositoryTypeorm";
+import { ListClients } from "../../usecases/clients/ListClients";
 
 export function CreateClientControllerFactory(): CreateClientController {
   const clientRepositoryTypeorm = new ClientRepositoryTypeorm();
@@ -15,7 +16,9 @@ export function CreateClientControllerFactory(): CreateClientController {
 }
 
 export function ListClientControllerFactory(): ListClientsController {
-  const listClientController = new ListClientsController();
+  const clientRepositoryTypeorm = new ClientRepositoryTypeorm();
+  const listClientsUseCase = new ListClients(clientRepositoryTypeorm);
+  const listClientController = new ListClientsController(listClientsUseCase);
 
   return listClientController;
 }

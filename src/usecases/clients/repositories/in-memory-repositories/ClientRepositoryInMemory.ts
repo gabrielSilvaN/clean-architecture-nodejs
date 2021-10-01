@@ -1,5 +1,5 @@
 import { ClientData } from "../../../../entities/client/Client";
-import { ClientRepository } from "../../repositories/ClientRepository";
+import { ClientRepository } from "../ClientRepository";
 
 export class ClientRepositoryInMemory implements ClientRepository {
   private clients: ClientData[] = [];

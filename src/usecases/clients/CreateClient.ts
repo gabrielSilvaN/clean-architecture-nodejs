@@ -1,5 +1,5 @@
-import { ClientData, Client } from "../../../entities/client/Client";
-import { ClientRepository } from "../repositories/ClientRepository";
+import { ClientData, Client } from "../../entities/client/Client";
+import { ClientRepository } from "./repositories/ClientRepository";
 
 export class CreateClient {
   private repository: ClientRepository;
@@ -15,7 +15,7 @@ export class CreateClient {
       client.email
     );
 
-    if (clientAlreadyExists) return new Error("User already exists");
+    if (clientAlreadyExists) return new Error("Client already exists");
 
     return this.repository.createClient(clientData);
   }
